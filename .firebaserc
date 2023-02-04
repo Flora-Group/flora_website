@@ -1,5 +1,14 @@
 {
   "projects": {
-    "default": "flora-exports"
+    "default": "website-4fe51"
+  },
+  "targets": {
+    "website-4fe51": {
+      "hosting": {
+        "flora-exports": [
+          "website-4fe51"
+        ]
+      }
+    }
   }
 }
