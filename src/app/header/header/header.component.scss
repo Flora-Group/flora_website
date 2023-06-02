@@ -1,6 +1,3 @@
-@import "variables";
-@import "theme";
-
 .toolbar {
   position: relative;
   top: 0;
@@ -21,7 +18,6 @@
   vertical-align: middle;
   top: 30px;
   color: white;
-  // animation: change-color 7s infinite;
   position: absolute;
 }
 
@@ -71,26 +67,26 @@
   background-color: white;
 }
 
-.parallax > use {
+.parallax>use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 
-.parallax > use:nth-child(1) {
+.parallax>use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 7s;
 }
 
-.parallax > use:nth-child(2) {
+.parallax>use:nth-child(2) {
   animation-delay: -3s;
   animation-duration: 10s;
 }
 
-.parallax > use:nth-child(3) {
+.parallax>use:nth-child(3) {
   animation-delay: -4s;
   animation-duration: 13s;
 }
 
-.parallax > use:nth-child(4) {
+.parallax>use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
 }
@@ -99,6 +95,7 @@
   0% {
     transform: translate3d(-90px, 0, 0);
   }
+
   100% {
     transform: translate3d(85px, 0, 0);
   }
@@ -108,100 +105,29 @@
   0% {
     color: white;
   }
+
   50% {
     color: black;
   }
+
   100% {
     color: white;
   }
 }
 
-.nav,
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .nav {
+  margin-top: -35px;
+  z-index: 2;
   position: absolute;
-  background-color: white;
-  padding: 10px;
-  max-height: 20px;
-  // transition: 0.5s;
-  border-radius: 50px;
-  overflow: hidden;
-  float: right;
-  top: 25px;
+  width: 50%;
   right: 0;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  justify-items: end;
+  background-color: transparent;
 }
 
-.menu {
-  margin: 0;
-  padding: 0;
-  width: 0;
-  overflow: hidden;
-  max-height: 20px;
-  transition: 0.5s;
-}
-
-.nav input:checked ~ .menu {
-  width: 750px;
-}
-
-.menu li {
-  list-style: none;
-  margin: 0 10px;
-}
-
-.menu li a {
-  text-decoration: none;
-  color: black;
-  opacity: 0.6;
-  text-transform: uppercase;
-  font-weight: 600;
-  transition: 1s;
-}
-
-.menu li a:hover {
-  color: red;
-}
-
-.nav input {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  opacity: 0;
-}
-
-.nav span {
-  position: absolute;
-  left: 15px;
-  width: 20px;
-  height: 4px;
-  border-radius: 60px;
-  background-color: black;
-  pointer-events: none;
-  transition: 0.5s;
-}
-
-.nav input:checked ~ span {
-  background-color: black;
-}
-
-.nav span:nth-child(2) {
-  transform: translateY(-8px);
-}
-
-.nav input:checked ~ span:nth-child(2) {
-  transform: translateY(0) rotate(-45deg);
-}
-
-.nav span:nth-child(3) {
-  transform: translateY(8px);
-}
-
-.nav input:checked ~ span:nth-child(3) {
-  transform: translateY(0) rotate(45deg);
+@media screen and (max-width: 480px)  {
+  .nav {
+    margin-top: 0;
+    width: 100%;
+  }
 }

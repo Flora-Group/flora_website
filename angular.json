@@ -82,14 +82,7 @@
           }
         },
         "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {
-            "prerender": false,
-            "ssr": false,
-            "browserTarget": "flora-exports:build:production",
-            "firebaseProject": "website-4fe51",
-            "firebaseHostingSite": "website-4fe51"
-          }
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

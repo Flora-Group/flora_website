@@ -12,23 +12,23 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  menuToggle() {
-    var x = document.getElementById("myLinks");
+  // menuToggle() {
+  //   var x = document.getElementById("myLinks");
 
-    if (x && x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      //@ts-ignore
-      x.style.display = "block";
-    }
-    console.log("data")
-  }
+  //   if (x && x.style.display === "block") {
+  //     x.style.display = "none";
+  //   } else {
+  //     //@ts-ignore
+  //     x.style.display = "block";
+  //   }
+  //   console.log("data")
+  // }
 
-  closeNav() {
-    setTimeout(() => {
-      var x = document.getElementById("myLinks");
-      //@ts-ignore
-      x.style.display = "none";
-    }, 50);
-  }
+  // closeNav() {
+  //   setTimeout(() => {
+  //     var x = document.getElementById("myLinks");
+  //     //@ts-ignore
+  //     x.style.display = "none";
+  //   }, 50);
+  // }
 }
